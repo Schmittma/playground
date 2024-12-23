@@ -1,0 +1,381 @@
+/* 
+----------------------------------------------------
+GENERAL DESIGN  
+----------------------------------------------------
+*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #ece8e8;
+}
+
+/* 
+----------------------------------------------------
+Fonts  
+----------------------------------------------------
+*/
+@font-face {
+    font-family: 'Momcake-Bold';
+    src: url('/assets/fonts/MomcakeBold-WyonA.otf') format('opentype');
+}
+/* 
+----------------------------------------------------
+Main page content  
+----------------------------------------------------
+*/
+
+@media (min-width: 1000px) {
+    #mainpage__content_container {
+        margin-left: 7%;
+        margin-right: 7%;
+        margin-top: 20px;
+        margin-bottom: 50px;
+        box-shadow: 0 0 6px rgb(93, 89, 89);
+        
+    }
+}
+
+#mainpage__content_container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.mainpage__content_header {
+    font-size: xxx-large;
+    font-family: "Momcake-Bold";
+    
+}
+
+hr.mainpage__content_divider {
+    border: 2px solid black;
+    width: 44px;
+    margin-left: 2px;
+}
+
+.mainpage__content_item {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+h3 {
+    font-size: x-large;
+    margin-top: 30px
+}
+
+h4 {
+    font-size: large;
+}
+p, li, dd{
+    text-align: justify;
+    font-size: larger;
+    line-height: 1.5;
+}
+
+.mainpage__content_image {
+    width: fit-content;
+    height: 300px;
+    border: 2px solid #E3E3E3; 
+}
+
+.mainpage__content_divider {
+    border: 1px solid #d3d3d3;
+    align-self: stretch;
+}
+
+.mainpage__skill_summary_header {
+    margin-top: 20px;
+}
+
+.mainpage__content_note {
+    font-size: medium;
+    color: rgb(81, 81, 81);
+}
+
+.mainpage__content_section_smaller_text {
+    font-size: small;
+    color: rgb(50, 50, 50);
+}
+/* 
+----------------------------------------------------
+LISTS
+----------------------------------------------------
+*/
+.mainpage__skill_summary_list {
+    margin-left: 40px;
+    margin-top: 4px;
+}
+
+.mainpage__skill_summary_list li {
+    margin-top: 7px;
+}
+
+dd {
+    margin-left: 40px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+dd.finished::before {
+    content: "\2611  ";
+    color: black;
+    font-weight: bold;
+}
+dd.open::before {
+    content: "\2610  ";
+    color: black;
+    font-weight: bold;
+}
+/* 
+----------------------------------------------------
+NAVIGATION BAR
+----------------------------------------------------
+*/
+#navbar {
+    background-color: black;
+    display: flex;
+    justify-content: left;
+    position: sticky;
+    height: 50px;
+    top: 0px;
+    z-index: 999;
+    align-items: center;
+}
+
+.navbar__container {
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    margin: 0%;
+    display: flex;
+}
+
+.navbar__logo {
+    display: flex;
+    width: 50px;
+    margin-left: 30px;
+}
+
+.navbar__menu {
+    align-items: center;
+    list-style: none;
+    display: flex;
+    justify-content: left;
+    width: 80%;
+    margin: 15px;
+}
+
+.navbar__menu a {
+    display: flex;
+    padding: 16px;
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.navbar__dropbutton {
+    font-size: inherit;
+    font-weight: bolder;
+    padding: 16px;
+    border: none;
+    color: white;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */ 
+}
+
+/* Dropdown content (hidden by default) */
+.navbar__dropdown_content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.navbar__dropdown_content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+  /* Show the dropdown menu on hover */
+.navbar__dropdown:hover .navbar__dropdown_content {
+    display: block;
+}
+
+/* Colors when hovering over the elements in the navbar */ 
+.navbar__menu a:hover, .navbar__dropdown:hover .navbar__dropbutton {
+    background-color:gray;
+}
+
+.navbar__dropdown_content a:hover {
+    background-color:lightgray;
+}
+
+/* 
+----------------------------------------------------
+FOOTER  
+----------------------------------------------------
+*/
+footer {
+    position: fixed;
+    height: 25px;
+    bottom: 0px;
+    width: 100%;
+    background-color: #C0C0C0;
+    align-items: center;
+    
+    display: flex;
+
+}
+
+.footer__container {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.footer__copyright {
+    font-weight: bolder;
+    font-size: medium;
+    text-align: right;
+    margin-right: 30px;
+}
+
+.footer__socials_container {
+    display: flex;
+    margin-left: 30px;
+    align-items: center;
+    flex-direction: row;
+}
+
+.footer__socials_logo {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+.footer__github_link {
+    font-weight: bolder;
+    font-size: medium;
+    text-align: left;
+    display: flex;
+}
+
+/* 
+----------------------------------------------------
+Tools & Apps --- Game releases  
+----------------------------------------------------
+*/
+
+/* 
+----------------------------------------------------
+Tools & Apps --- Pokemon Typechart  
+----------------------------------------------------
+*/
+#typechart__main_table {
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+}
+
+#typechart__main_table td{
+    text-align: center;
+    font-weight: normal;
+    border: 1px solid lightgrey;
+    min-width: 38px;
+    min-height: 38px;
+    border-radius: 3px;
+    font-weight: bolder;
+}
+
+#typechart__main_table th{
+    text-align: center;
+    font-weight: bold;
+    font-size: smaller;
+    color: white;
+    height: 38px;
+    min-width: 38px;
+    min-height: 38px;
+    border-radius: 6px;
+}
+
+#typechart__main_table #typechart__table_atk_def{
+    text-align: center;
+    font-weight: bold;
+    font-size: smaller;
+    color: black;
+}
+
+#typechart__main_table .highlighted {
+    border-color: rgb(0, 0, 0);
+    border-width: 5px;
+    
+}
+
+.mult_0{
+    background-color: rgba(0, 0, 0, 0.856);
+    color: rgba(255, 255, 255, 0.87);
+}  
+
+.mult_0_25{
+    background-color: rgb(175, 100, 3);
+    font-size: large;
+}
+
+.mult_0_5{
+    background-color: rgb(218, 128, 11);
+    font-size: large;
+}
+
+.mult_2{
+    background-color: rgb(69, 182, 17);
+}
+
+.mult_4{
+    background-color: rgb(87, 231, 20);
+}
+
+#typechart__breakdown_table{
+    width: 100%;
+    border-spacing: 0px;
+    border-collapse: collapse;
+}
+
+#typechart__breakdown_table th, #typechart__breakdown_table td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;    
+    width: 16.6%;
+}
+
+#typechart__breakdown_data {
+    height: 150px;
+}
+
+#typechart__breakdown_data td *{
+    color: white;
+    font-size: smaller;
+    text-align: center;
+    margin: 5px 5px 5px 5px;
+    border-radius: 20px;
+    border: 1px solid black;
+    height: 20px;
+    line-height: 20px;
+}

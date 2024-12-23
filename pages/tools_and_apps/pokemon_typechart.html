@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Pokemon typechart</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="/assets/styles/styles.css" />
+    <script src="/assets/scripts/apply_templates.js" async></script>
+    <script src="/assets/scripts/pokemon_typechart.js" async></script>
+</head>
+<body>
+    <nav id="navbar"></nav>
+    <div id="mainpage__content_container"> 
+
+        <section class="mainpage__content_item"></section>
+        <section class="mainpage__content_item">
+            <div class="mainpage__content_text__left">
+                <h1 class="mainpage__content_header">
+                    Pokemon Typechart for Gen 8
+                </h1>
+                <br \>
+                <br \>
+                <table id="typechart__main_table"></table>
+            </div>
+            <div class="mainpage__content_text__right">
+                <h2 class="mainpage__content_header">
+                    Selected type or combination
+                </h2>
+                <br />
+                
+                <table id="typechart__breakdown_table">
+                    <thead>
+                        <tr>
+                            <th colspan=6 id="typechart__breakdown_table_type" onclick="onClick_deselect_all(this)" style="cursor: pointer;">No type selected</th>
+                        </tr>
+                        <tr>
+                            <th class="mult_0">0x</th>
+                            <th class="mult_0_25">0.25x</th>
+                            <th class="mult_0_5">0.5x</th>
+                            <th class="mult_1">1x</th>
+                            <th class="mult_2">2x</th>
+                            <th class="mult_4">4x</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="typechart__breakdown_data">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <br \><br \><br \><br \>
+    </div>
+    <footer>
+    </footer>
+</body>
+</html>
