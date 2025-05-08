@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Sprechfunkzeugnis Luftfahrt</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="/assets/styles/styles.css" />
+    <script src="/assets/scripts/apply_templates.js" async></script>
+    <script src="/assets/scripts/flight_school.js" defer></script>
+</head>
+<body>
+    <nav id="navbar"></nav>
+    <div id="mainpage__content_container"> 
+        <section class="mainpage__content_item" style="flex-direction: column; align-items: center; gap: 10px;">
+            <h1 class="flight_school__title">Prüfungsfragen - Sprechfunkzeugnis Luftfahrt</h1>
+            <div class="flight_school__question-tracker"></div>
+            <p class="flight_school__question"> Question </p>
+            
+            <div class="flight_school__button-container">
+                <button type="button" class="flight_school__button">Answer 1</button>
+                <button type="button" class="flight_school__button">Answer 2</button>
+                <button type="button" class="flight_school__button">Answer 3</button>
+                <button type="button" class="flight_school__button">Answer 4</button>
+            </div>
+
+            <hr class="flight_school__separator"/>
+            <div class="flight_school__button-container">
+                <button type="button" class="flight_school__next-button" onclick="loadNextQuestion()">Next Question</button>
+                <button type="button" class="flight_school__next-button" onclick="loadRandomQuestion()">Random Question</button>
+            </div>
+        </section>
+    </div>
+    <footer>
+    </footer>
+</body>
+</html>
